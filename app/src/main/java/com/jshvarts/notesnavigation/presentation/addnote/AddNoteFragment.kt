@@ -17,8 +17,7 @@ class AddNoteFragment : Fragment() {
 
     private lateinit var viewModel: AddNoteViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.add_note_fragment, container, false)
     }
 

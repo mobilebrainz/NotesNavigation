@@ -5,6 +5,7 @@ package com.jshvarts.notesnavigation.domain
  * your data layer implementation injected into domain layer.
  */
 object NotesManager {
+
     private val notes = mutableMapOf<Int, String>()
 
     fun getNoteList(): List<Note> = notes.map { Note(it.key, it.value) }
@@ -25,8 +26,7 @@ object NotesManager {
         notes[id] = noteText
     }
 
-    fun deleteNote(id: Int) =
-            notes.remove(id) ?: throw IllegalStateException("Note was not removed.")
+    fun deleteNote(id: Int) = notes.remove(id) ?: throw IllegalStateException("Note was not removed.")
 
     private fun getNextId(): Int = notes.count() + 1
 
